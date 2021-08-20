@@ -1,0 +1,77 @@
+<div
+  class="
+    column-spaced-flexible
+    white-background
+    container-sm
+    white-border
+    margin-sm
+  "
+  style="overflow: hidden"
+>
+  <div class="row-start-static w-100 text-start container-sm">
+    <a
+      (click)="goBack()"
+      class="
+        secondary-link
+        body-md-bold
+        width-100
+        text-start
+        margin-y-auto
+        height-100
+        row-start-static
+      "
+    >
+      <img src="../../../assets/icons/back.svg" class="height-100" />
+      Back
+    </a>
+  </div>
+  <div class="row-center-flexible width-100">
+    <div class="column-center-flexible width-90">
+      <img
+        src="{{ data.thumbnail }}"
+        alt=""
+        class="width-100 height-100 white-border"
+        style="object-fit: cover; max-height: 350px"
+      />
+    </div>
+    <div class="column-start-flexible width-auto margin-x-md container-sm">
+      <div class="row-start-static width-100 margin-none">
+        <p class="primary-text body-lg-bold">{{ data.name }}</p>
+      </div>
+      <div class="row-start-static width-100 margin-none">
+        <p class="secondary-text body-md-bold margin-none">
+          {{ data.category.name }}
+        </p>
+      </div>
+      <div class="row-start-flexible width-100 height-80">
+        <p class="body-sm-regular">
+          {{ data.description }}
+        </p>
+      </div>
+      <div class="row-end-static width-100">
+        <button
+          type="button"
+          (click)="enrollCourse()"
+          class="
+            secondary-button
+            container-xxs
+            secondary-border
+            body-sm-bold
+            white-text
+          "
+        >
+          Enroll Course
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="column-start-static container-sm">
+  <p class="primary-text body-xl-bold">Similar Courses</p>
+  <div class="row-center-flexible">
+    <div *ngFor="let item of similar">
+      <app-course-card [item]="item"></app-course-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div
+  class="
+    registered-card-sm
+    row-start-static
+    white-background white-border
+    margin-x-md
+  "
+  (click)="openCourse()"
+>
+  <div class="width-100 height-100 column-start-static">
+    <img
+      src="{{ item.thumbnail }}"
+      alt=""
+      class="light-border"
+      style="margin: 0"
+    />
+  </div>
+  <div
+    class="
+      column-start-static
+      registered-text-sm
+      width-100
+      height-100
+      container-sm
+    "
+  >
+    <div
+      class="
+        row-start-static
+        width-100
+        height-100
+        margin-top-sm margin-bottom-0
+      "
+    >
+      <p class="primary-text body-sm-bold margin-y-0">
+        {{ item.name }}
+      </p>
+    </div>
+    <div class="row-start-flexible margin-y-0 width-100">
+      <p class="body-sm-bold secondary-text margin-y-0">
+        {{ item.category.name }}
+      </p>
+    </div>
+    <div class="row-spaced-static margin-y-none width-100 margin-bottom-sm">
+      <p class="body-sm-bold" style="margin: 0px 0 0px 0">Progress</p>
+      <progress
+        id="file"
+        max="100"
+        value="{{ item.progress }}"
+        class="margin-x-auto width-50 container-xxs"
+        style="margin: 00px 0 0px 0"
+      ></progress>
+    </div>
+  </div>
+</div>

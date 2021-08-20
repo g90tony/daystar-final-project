@@ -1,0 +1,50 @@
+<div
+  id="sidebar"
+  class="
+    white-background
+    column-start-static
+    text-center
+    container-xxs
+    height-100
+  "
+>
+  <div class="row-spaced-static w-100">
+    <div class="w-100 container-sm">
+      <img src="../../../../assets/images/nav-logo.png" alt="" id="nav-logo" />
+    </div>
+  </div>
+
+  <a routerLink="/" class="sidebar-items width-50">
+    <img src="../../../../assets/icons/home.svg" width="30px" />
+    <p class="body-sm-bold primary-text text-start">Dashboard</p>
+  </a>
+  <a routerLink="/courses/registered" class="sidebar-items width-50">
+    <img src="../../../../assets/icons/registered.svg" width="30px" />
+    <p class="body-sm-bold primary-text text-start">
+      Registered <br />
+      Courses
+    </p>
+  </a>
+  <a routerLink="/courses/browse" class="sidebar-items width-50">
+    <img src="../../../../assets/icons/courses.svg" width="30px" />
+    <p class="body-sm-bold primary-text text-start">
+      Browse <br />
+      Courses
+    </p>
+  </a>
+  <a routerLink="/profile/edit" class="sidebar-items width-50">
+    <img src="../../../../assets/icons/profile.svg" width="30px" />
+    <p class="body-sm-bold primary-text text-start">
+      Edit <br />
+      Profile
+    </p>
+  </a>
+  <button
+    (click)="logout()"
+    type="button"
+    class="sidebar-items white-background white-border width-50"
+  >
+    <img src="../../../../assets/icons/log-out.svg" width="30px" />
+    <p class="body-sm-bold primary-text text-start">Log out</p>
+  </button>
+</div>

@@ -1,0 +1,23 @@
+<div class="container-sm">
+  <div class="row-start-static width-100 height-auto">
+    <p class="primary-text body-xl-bold">Registered Courses</p>
+  </div>
+  <div
+    class="row-start-static width-100 height-auto"
+    style="overflow-x: auto; overflow-y: hidden"
+  >
+    <div *ngFor="let item of registered_courses">
+      <app-registered-card-small [item]="item"></app-registered-card-small>
+    </div>
+  </div>
+
+  <div class="row-start-static width-100 height-auto">
+    <p class="primary-text body-xl-bold">Recently Added Courses</p>
+  </div>
+
+  <div class="row-start-flexible width-100 height-100 margin-y-md margin-top-0">
+    <div *ngFor="let item of recently_added" id="browse-list">
+      <app-course-card [item]="item"></app-course-card>
+    </div>
+  </div>
+</div>

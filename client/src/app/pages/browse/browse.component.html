@@ -1,0 +1,36 @@
+<div class="row-center-flexible margin-x-auto width-100">
+  <div
+    class="
+      row-spaced-flexible
+      width-80
+      white-background white-border
+      container-x-sm
+      margin-x-auto margin-y-sm
+    "
+  >
+    <p class="body-xl-bold primary-text width-auto">Browse Courses</p>
+
+    <form action="" class="inline-form width-auto">
+      <input
+        type="text"
+        name="search"
+        id="search"
+        placeholder="Search registered courses..."
+      />
+    </form>
+  </div>
+
+  <div
+    class="
+      row-start-flexible
+      width-80
+      margin-x-auto
+      height-auto
+      margin-bottom-lg
+    "
+  >
+    <div *ngFor="let item of api_results">
+      <app-course-card [item]="item"></app-course-card>
+    </div>
+  </div>
+</div>

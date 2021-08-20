@@ -1,0 +1,46 @@
+<div
+  class="row-center-flexible white-border white-background height-100 margin-sm"
+  style="overflow-y: auto"
+>
+  <div id="player-column" class="column-start-static height-100">
+    <div class="row-start-static width-100 text-start container-sm">
+      <a
+        (click)="goBack()"
+        class="
+          secondary-link
+          body-md-bold
+          width-100
+          text-start
+          margin-y-auto
+          height-100
+          row-start-static
+        "
+      >
+        <img src="../../../assets/icons/back.svg" class="height-100" />
+        Back
+      </a>
+    </div>
+    <div class="row-start-static width-100">
+      <app-video-player
+        [lesson]="current_lesson"
+        #youtube_player
+      ></app-video-player>
+    </div>
+  </div>
+  <div id="lesson-column" class="column-start-static">
+    <div class="row-start-static width-100">
+      <p class="body-lg-bold primary-text">Course Lessons</p>
+    </div>
+    <div
+      class="column-end-static width-100 height-100 margin-x-auto"
+      style="overflow-y: auto"
+    >
+      <div *ngFor="let item of course_lessons">
+        <app-lesson-selector
+          [item]="item"
+          (change_lesson)="onLessonChange($event)"
+        ></app-lesson-selector>
+      </div>
+    </div>
+  </div>
+</div>

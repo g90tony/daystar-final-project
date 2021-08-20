@@ -1,0 +1,11 @@
+.course-lesson-list-container {
+  width: 250px;
+  margin: 10px auto;
+}
+
+@media screen and (max-width: 576px) {
+  .course-lesson-list-container {
+    width: inherit;
+    margin: 10px;
+  }
+}

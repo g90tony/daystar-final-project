@@ -1,0 +1,9 @@
+@media screen and(max-width:576px) {
+  #player-column {
+    width: 100% !important;
+  }
+
+  #lesson-column {
+    width: 100% !important;
+  }
+}

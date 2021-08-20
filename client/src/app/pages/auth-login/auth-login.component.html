@@ -1,0 +1,80 @@
+<div class="row-center-static">
+  <div
+    class="
+      width-50
+      column-center-static
+      white-background
+      container-md
+      margin-xl
+      height-100
+      white-border
+    "
+  >
+    <p
+      class="primary-text subheading-bold width-100 text-center margin-bottom-0"
+    >
+      Welcome to Video Instructor
+    </p>
+
+    <p class="body-md-bold w-100 text-center margin-bottom-md">
+      Login to continue:
+    </p>
+    <form
+      class="
+        form-block
+        column-center-flexible
+        white-background white-border
+        width-80
+        height-100
+        margin-auto
+      "
+      enctype="multipart/form-data"
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="row-center-static width-100 margin-y-xs">
+        <div class="column-start-static width-80">
+          <label for="" class="body-md-bold">Enter your email</label>
+          <input
+            type="text"
+            class="body-xs-regular container-x-sm margin-y-xs width-100"
+            placeholder="johndoe@example.com"
+            formControlName="username"
+          />
+        </div>
+      </div>
+      <div class="row-center-static width-100 margin-y-xs">
+        <div class="column-start-static width-80">
+          <label for="" class="body-md-bold">Enter your password</label>
+          <input
+            type="password"
+            class="body-xs-regular container-x-sm margin-y-xs width-100"
+            placeholder="Type password here"
+            formControlName="password"
+          />
+        </div>
+      </div>
+
+      <div class="row-end-static width-100">
+        <button
+          type="submit"
+          class="primary-button primary-border body-md-bold"
+          style="padding: 5px 10px"
+        >
+          Sign In
+        </button>
+      </div>
+
+      <div class="row-center-static width-100">
+        <p class="mx-auto body-sm-regular">
+          If you don't have an account,
+          <span
+            ><a class="secondary-link body-sm-bold" routerLink="/users/register"
+              >click here.</a
+            ></span
+          >
+        </p>
+      </div>
+    </form>
+  </div>
+</div>

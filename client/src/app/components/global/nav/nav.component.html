@@ -1,0 +1,32 @@
+<div
+  id="navbar"
+  class="white-background row-flexible-spaced width-100 height-100"
+>
+  <div class="row-spaced-static w-100">
+    <div class="w-100 container-sm">
+      <img src="../../../../assets/images/nav-logo.png" alt="" id="nav-logo" />
+    </div>
+    <button
+      id="sidebar-drawer"
+      (click)="toggleSidebar()"
+      class="
+        margin-x-sm
+        light-background light-border
+        primary-text
+        container-xs
+        body-md-bold
+      "
+    >
+      <img src="../../../../assets/icons/menu-drawer.png" width="25px" alt="" />
+    </button>
+
+    <form
+      id="course_search"
+      enctype="multipart/form-data"
+      method="POST"
+      class="container-sm width-20 inline-form"
+    >
+      <input type="text" placeholder="Search course titles" class="width-100" />
+    </form>
+  </div>
+</div>

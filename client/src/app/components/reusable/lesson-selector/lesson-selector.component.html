@@ -1,0 +1,48 @@
+<div
+  class="
+    row-start-static
+    light-background
+    white-border
+    margin-x-auto
+    container-xs
+  "
+  style="width: 225px"
+>
+  <div
+    id="{{ item.id }}"
+    (click)="changeLesson()"
+    class="column-start-static width-auto margin-x-sm"
+  >
+    <div class="loader width-100">
+      <img
+        class="border-circle light-background container-xs margin-auto"
+        src="../../../../assets/icons/play.svg"
+        alt=""
+        id="{{ item.id }}"
+      />
+    </div>
+  </div>
+  <div
+    class="
+      white-background
+      column-start-static
+      circular-border
+      width-100
+      height-80
+    "
+  >
+    <p
+      class="
+        body-sm-bold
+        row-start-static
+        primary-text
+        width-100
+        height-100
+        margin-none
+        light-background
+      "
+    >
+      {{ item.title }}
+    </p>
+  </div>
+</div>

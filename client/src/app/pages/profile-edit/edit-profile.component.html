@@ -1,0 +1,129 @@
+<div class="row-center-static container-xl">
+  <div class="column-start-static white-background white-border">
+    <p class="primary-text text-center width-100 subheading-bold">
+      Edit Profile
+    </p>
+    <div
+      class="column-start-static width-100 margin-auto"
+      style="align-items: center"
+    >
+      <img
+        src="{{ current_user.avatar }}"
+        alt=""
+        class="border-circle margin-y-sm margin-x-auto"
+        width="200px"
+        height="200px"
+        style="object-fit: cover"
+      />
+      <div class="row-center-static margin-y-none width-100">
+        <p class="primary-text body-xl-bold text-center">
+          {{ current_user.first_name }} {{ current_user.last_name }}
+        </p>
+      </div>
+    </div>
+    <div class="row-start-flexible height-auto width-100 margin-auto">
+      <div class="row-start-static width-auto">
+        <form
+          action="/profile/update/email"
+          method="POST"
+          class="block-form width-100"
+        >
+          <p
+            class="
+              primary-text
+              body-lg-bold
+              width-80
+              margin-bottom-0
+              text-start
+            "
+          >
+            Change Password
+          </p>
+          <div class="margin-bottom-sm width-80 margin-top-xxs">
+            <label for="new_email" class="width-70 text-start container-xxs"
+              >Old Password</label
+            >
+            <input
+              type="text"
+              class="width-80 text-start container-xs"
+              name="new_email"
+              id="new_email"
+              placeholder="Enter new email here..."
+            />
+          </div>
+          <div class="margin-bottom-sm width-80 margin-top-xxs">
+            <label for="new_email" class="width-70 text-start container-xxs"
+              >New Password</label
+            >
+            <input
+              type="text"
+              class="width-80 text-start container-xs"
+              name="new_email"
+              id="new_email"
+              placeholder="Enter new email here..."
+            />
+          </div>
+          <div class="width-60 row-end-static">
+            <button
+              class="
+                primary-button
+                margin-xxs
+                container-xxs
+                primary-border
+                white-text
+                width-100
+                body-sm-bold
+              "
+              type="submit"
+            >
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="row-start-static width-auto" style="align-items: flex-start">
+        <form
+          action="/profile/update/avatar"
+          method="POST"
+          class="block-form margin-y-auto height-100 width-100"
+        >
+          <p
+            class="
+              primary-text
+              body-lg-bold
+              width-80
+              margin-bottom-0
+              text-start
+            "
+          >
+            Change Password
+          </p>
+          <label for="email" class="width-70 text-start container-xxs"
+            >Update Avatar</label
+          >
+          <input
+            type="file"
+            class="width-80 text-start container-xs"
+            accept="image/*"
+          />
+          <div class="width-60 row-end-static">
+            <button
+              class="
+                primary-button
+                margin-xxs
+                container-xxs
+                primary-border
+                white-text
+                width-100
+                body-sm-bold
+              "
+              type="submit"
+            >
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

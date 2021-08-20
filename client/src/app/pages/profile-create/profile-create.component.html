@@ -1,0 +1,77 @@
+<div class="row-center-static margin-top-xl">
+  <div
+    class="
+      width-50
+      column-center-static
+      white-background
+      container-md
+      height-auto
+      white-border
+    "
+  >
+    <p
+      class="primary-text subheading-bold width-100 text-center margin-bottom-0"
+    >
+      One Final Step
+    </p>
+
+    <p class="body-md-bold w-100 text-center margin-bottom-md">
+      Let's create your profile:
+    </p>
+    <form
+      class="
+        form-block
+        column-center-flexible
+        white-background white-border
+        width-80
+        height-100
+        margin-auto
+      "
+      enctype="multipart/form-data"
+      [formGroup]="createProfileForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="row-center-flexible width-100 margin-y-xs">
+        <div class="column-start-static width-auto margin-x-xs">
+          <label for="" class="body-md-bold">Enter your first name</label>
+          <input
+            type="text"
+            class="body-xs-regular container-x-sm margin-y-xs width-auto"
+            placeholder="John"
+            formControlName="first_name"
+          />
+        </div>
+        <div class="column-start-static width-auto margin-x-xs">
+          <label for="" class="body-md-bold">Enter your last name</label>
+          <input
+            type="text"
+            class="body-xs-regular container-x-sm margin-y-xs width-auto"
+            placeholder="Doe"
+            formControlName="last_name"
+          />
+        </div>
+      </div>
+      <div class="row-center-static width-100 margin-y-xs">
+        <div class="column-start-static width-80">
+          <label for="" class="body-md-bold">Upload your new avatar</label>
+          <input
+            type="file"
+            accept="image/*"
+            (change)="uploadAvatar($event)"
+            formControlName="picture"
+            class="body-xs-regular container-x-sm margin-y-xs width-100"
+          />
+        </div>
+      </div>
+      <div class="row-end-static width-100">
+        <button
+          type="submit"
+          class="primary-button primary-border width-30 body-md-bold"
+          style="padding: 5px 10px"
+        >
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

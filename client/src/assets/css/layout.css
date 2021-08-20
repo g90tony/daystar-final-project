@@ -1,0 +1,150 @@
+:root {
+  --primary: #0081a7;
+  --secondary: #00afb9;
+  --light: #f2f2f2;
+  --white: #ffffff;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 0.2fr 0.9fr;
+  grid-template-rows: 0.2fr 8fr;
+  grid-template-areas:
+    "nav nav"
+    "sidebar content";
+
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  position: relative;
+}
+
+#navbar {
+  grid-area: nav;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: min-content;
+  z-index: 4;
+}
+
+#navbar #nav-logo {
+  height: auto;
+  width: 200px;
+
+  object-fit: contain;
+}
+
+#sidebar-container {
+  grid-area: sidebar;
+
+  position: fixed;
+
+  left: 0;
+
+  height: 100%;
+  width: 20%;
+  z-index: 3;
+}
+
+#sidebar {
+  width: 250px;
+  padding-top: 50px;
+}
+
+#sidebar #nav-logo {
+  display: none;
+}
+
+#sidebar-drawer {
+  display: none;
+}
+
+.sidebar-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 20px auto;
+
+  text-decoration: none;
+}
+.sidebar-items img {
+  margin: 5px auto;
+}
+.sidebar-items p {
+  margin: 5px 10px;
+}
+
+#content {
+  grid-area: content;
+  overflow-y: auto;
+  height: inherit;
+  position: fixed;
+  top: 100px;
+  left: 20%;
+  width: 80%;
+  height: 80%;
+}
+
+@media screen and (max-width: 576px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    grid-template-areas:
+      "nav"
+      "content";
+  }
+
+  #navbar {
+    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  #nav #nav-logo {
+    display: none;
+  }
+
+  #course_search {
+    display: none;
+  }
+
+  #sidebar-drawer {
+    display: flex;
+  }
+
+  #sidebar-container {
+    top: 75px;
+    left: 0;
+    position: fixed;
+    z-index: 3;
+    overflow: hidden;
+  }
+
+  #sidebar #nav-logo {
+    height: auto;
+    width: 100%;
+
+    object-fit: contain;
+  }
+
+  #content {
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    left: 0;
+    top: 20px;
+  }
+}
