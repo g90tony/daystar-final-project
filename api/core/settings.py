@@ -60,7 +60,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-
 ]
 
 REST_FRAMEWORK = {
@@ -80,6 +79,7 @@ SESSION_COOKIE_SAMESITE = 'None'
 CSRF_COOKIE_HTTPONLY = 'False'
 CSRF_COOKE_NAME = 'X-CSRFToken'
 CSRF_HEADER_NAME = 'HTTP_X-XSRF_TOKEN'
+SESSION_COOKIE_SECURE = True
 
 
 TEMPLATES = [
