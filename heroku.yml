@@ -6,4 +6,3 @@ build:
   docker:
     api: api/Dockerfile
     client: client/Dockerfile
-    db: postgres:latest
